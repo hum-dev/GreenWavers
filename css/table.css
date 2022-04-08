@@ -52,6 +52,7 @@ body {
 .navigation__item--link, .navigation__item--link:visited{
     color: var(--col-black-light);
     text-transform: uppercase;
+    text-decoration: none;
     transition: all .3s ease;
 }
  
@@ -59,6 +60,32 @@ body {
     color: rgb(6, 206, 96);
 }
 
+
+@media screen and (max-width:800px) {
+    .navigation__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation__nav{
+        position: absolute;
+        right: -20rem;
+        top: 2rem;
+        z-index: 1;
+        transition: all .6s ease;
+        /* background-color: white; */
+    }
+    .show__nav{
+        /* position: absolute; */
+        top: 2rem;
+        right: 20rem;
+    }
+    .nav__button-main{
+        display: block;
+    }
+    .navigation__item--link, .navigation__item--link:visited{
+        color: var(--col-white);
+    }
+}
 
 input[type=text], input[type=search] {
     padding: 10px;
@@ -117,14 +144,15 @@ input[type=text], input[type=search] {
     border-collapse: collapse;
 }
 .leaderboard-results thead th {
-    padding: 25px;
+    padding:18px;
     color: #07b123;
     font-size: 14px;
     font-weight: bold;
 }
 .leaderboard-results tbody td {
     padding: 10px 25px;
-    background: #1a1a1a;
+    background: #02773d;
+    color: #88ffbe;
     font-size: 16px;
     border-bottom: 5px solid #232323;
 }
@@ -132,7 +160,8 @@ input[type=text], input[type=search] {
     font-weight: bold;
 }
 .leaderboard-results tbody tr:hover td {
-    background: #1d1d1d;
+    background: #5de69b;
+    color: #098b04;
 }
 .leaderboard-results tbody tr {
     color: #747474;
@@ -148,3 +177,42 @@ input[type=text], input[type=search] {
     color: #747474;
 }
 
+.container {
+    display: grid;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.form-control {
+    flex-direction: column;
+    margin-top: 1.6rem;
+    margin-bottom: -3px;
+    margin-left: 0;
+    width: 100%;
+    align-items: center;
+    line-height: 1.3em;
+
+}
+.upload-input {
+    /* background: #5055CB; */
+    line-height: 4em;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.upload-input img {
+    width: 30px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.upload-input input {
+    display: none !important;
+}
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.img {
+    padding-top: 0;
+    margin-top: -3rem;
+    margin-left: 4rem;
+}
